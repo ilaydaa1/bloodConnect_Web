@@ -1,0 +1,278 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff;
+  color: #1c2340;
+  overflow-x: hidden;
+}
+
+/* === NAVBAR === */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #fffdfd;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 20px; 
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  background-color: #5e0b0b;
+  padding: 5px 15px;
+  border-radius: 30px;
+  height: 50px;
+}
+
+.logo-container img {
+  width: 26px;
+  margin-right: 8px;
+}
+
+.logo-text {
+  font-size: 0.95em;
+  font-weight: 700;
+  color: white;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  padding: 0;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #5e0b0b;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 5px 10px;
+}
+
+.right-menu {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+#logout-button {
+  background-color: #5e0b0b;
+  color: white;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+#logout-button:hover {
+  background-color: #900000;
+}
+
+.hero {
+  background-color: #f3e0e8;
+  min-height: 100vh;
+  padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  color: #390202;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.hero .hero-button {
+  padding: 12px 28px;
+  background-color: #5e0b0b;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.hero .hero-button:hover {
+  background-color: #900000;
+}
+
+/* === DONATION LİSTESİ === */
+#donation-list {
+  max-width: 1000px;
+  width: 90%;
+  margin: 40px auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.donation-card {
+  background: #fff;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 20px;
+  font-size: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.donation-card:hover {
+  transform: scale(1.01);
+}
+
+.donation-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 16px;
+  gap: 6px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.donation-top span:first-child {
+  word-break: break-word;
+  max-width: 70%;
+}
+
+.donation-top span:last-child {
+  color: #1c2340;
+  white-space: nowrap;
+  font-size: 14px;
+}
+
+.donation-info p {
+  margin: 6px 0;
+  font-size: 14px;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  /* NAVBAR – yatayda kalması için */
+  .navbar {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 10px 12px;
+  }
+
+  .navbar-left,
+  .nav-links,
+  .right-menu {
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+
+  .logo-container {
+    flex-shrink: 0;
+    max-width: 100%;
+    padding: 5px 12px;
+  }
+
+  .logo-text {
+    font-size: 0.85em;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .nav-links li a {
+    font-size: 14px;
+    padding: 5px 8px;
+  }
+
+  .right-menu {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  #logout-button {
+    font-size: 13px;
+    padding: 6px 12px;
+    white-space: nowrap;
+  }
+
+  /* HERO alanı */
+  .hero {
+    padding: 80px 16px 20px 16px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+    padding: 0 12px;
+    word-break: break-word;
+  }
+
+  .hero .hero-button {
+    font-size: 0.9rem;
+    padding: 10px 22px;
+  }
+
+  /* DONATION listesi */
+  #donation-list {
+    width: 95%;
+    margin-top: 20px;
+  }
+
+  .donation-top {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .donation-top span:first-child {
+    max-width: 100%;
+    word-break: break-word;
+  }
+
+  .donation-top span:last-child {
+    font-size: 13px;
+  }
+
+  .donation-info p {
+    font-size: 13px;
+  }
+}

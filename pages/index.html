@@ -1,0 +1,199 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Connect</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- CSS Dosyası -->
+    <link rel="stylesheet" href="../StyleSheet1.css">
+    <style>
+        /* Basit görsel bölümü düzeni */
+        .image-section {
+            text-align: center;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+            .image-section img {
+                max-width: 100%;
+                height: auto;
+                border-radius: 16px;
+                box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+            }
+    </style>
+</head>
+<body>
+    <!-- Navbar Başlangıç -->
+    <header>
+        <nav class="navbar">
+            <div class="logo-container">
+                <img src="../image/logo.png" class="logo">
+                <span class="logo-text">BLOOD CONNECT</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+               
+            </ul>
+            <div class="right-menu">
+                
+                <a href="../pages/login.html" class="login-btn" id="login-button">
+                    <span class="heart">❤️</span> Login
+                </a>
+            </div>
+        </nav>
+    </header>
+    <!-- Navbar Bitiş -->
+    <!-- Hero Bölümü -->
+    
+        <section class="hero-slider">
+            <div class="slide active" style="background-image: url('../image/1slider.png');"></div>
+            <div class="slide" style="background-image: url('../image/2slider.png');"></div>
+            <div class="slide" style="background-image: url('../image/3slider.png');"></div>
+          </section>
+   
+      
+      
+      
+    <!-- Hero Bölümü Bitiş -->
+    <section class="about-section" id="about">
+        <h2>Best Features of <span>BloodConnect</span>!</h2>
+        <div class="features-grid">
+      
+          <div class="feature-box">
+            <img src="../image/hospital.png" alt="hospital icon" />
+            <h3>Location Based Donor Matching</h3>
+            <p>Find the nearest donors and hospitals</p>
+          </div>
+      
+          <div class="feature-box">
+            <img src="../image/ai.png" alt="AI icon" />
+            <h3>AI Powered Selection</h3>
+            <p>Match donors by blood type and health status!</p>
+          </div>
+      
+          <div class="feature-box">
+            <img src="../image/secure.png" alt="secure icon" />
+            <h3>Secure Donation System</h3>
+            <p>Verify donors and store records safely</p>
+          </div>
+      
+          <div class="feature-box">
+            <img src="../image/tracking.png" alt="clock icon" />
+            <h3>Real Time Tracking</h3>
+            <p>See donor availability and blood stock instantly</p>
+          </div>
+      
+          <div class="feature-box">
+            <img src="../image/alert.png" alt="alert icon" />
+            <h3>Emergency Alert</h3>
+            <p>Notify donors quickly in urgent situations</p>
+          </div>
+      
+        </div>
+      </section>
+      
+
+    <section class="corporate-solutions">
+        <div class="text-side">
+          <h2>Corporate Solutions</h2>
+          <p>Manage blood donation processes for hospitals and healthcare institutions, and track needs in real time</p>
+          <div class="buttons">
+            <button class="btn red"><i class="fa-solid fa-hospital"></i> For Hospitals</button>
+            <button class="btn black"><i class="fa-solid fa-user"></i> For Person</button>
+          </div>
+        </div>
+        <div class="image-side">
+          <img src="../image/blood-donation.jpg" alt="Blood Donation">
+        </div>
+      </section>
+      
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="contact-section">
+        <div class="contact-container">
+
+            <!-- Sol Kısım: İletişim Bilgileri -->
+            <div class="contact-info">
+                <h2>Contact</h2>
+
+                <div class="contact-item">
+                    <img src="../image/phone-call.png" alt="Phone Icon">
+                    <div>
+                        <p>(123) 456-7890</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <img src="../image/email.png" alt="Email Icon">
+                    <div>
+                        <p>hello@bloodconnect.com</p>
+                    </div>
+                </div>
+
+                <p class="social-label">Social</p>
+                <div class="social-wrapper">
+                    <div class="social-icons">
+                        <img src="../image/facebook.png" alt="Facebook" />
+                        <img src="../image/instagram.png" alt="Instagram" />
+                        <img src="../image/twitter.png" alt="Twitter" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sağ Kısım: Harita -->
+            <div class="contact-map">
+                <img src="../image/map.png" alt="Map showing location">
+            </div>
+
+        </div>
+    </section>
+
+    <!--footer-->
+    <footer class="site-footer">
+        <div class="footer-logo-center">
+            <img src="../image/logo.png" alt="BloodConnect Logo">
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 BloodConnect. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const slides = document.querySelectorAll(".hero-slider .slide");
+        let currentSlide = 0;
+    
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove("active");
+                slide.style.opacity = "0";
+            });
+            slides[index].classList.add("active");
+            slides[index].style.opacity = "1";
+        }
+    
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+    
+        showSlide(currentSlide);
+        setInterval(nextSlide, 5000);
+    });
+    </script>
+    
+
+    <!-- JavaScript -->
+    <script src="../script.js"></script>
+
+
+ 
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+
+    <!-- Stil bağlantısı -->
+    <link rel="stylesheet" href="dashboard.css" />
+    <style>
+        .hero {
+           
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+           
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <nav class="navbar">
+  <div class="navbar-left">
+    <div class="logo-container">
+      <img src="../image/logo.png" class="logo" alt="BloodConnect Logo" />
+      <span class="logo-text">BLOOD CONNECT</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="tracking.html">Tracking</a></li>
+    </ul>
+  </div>
+
+  <div class="right-menu">
+    <button id="logout-button">Logout</button>
+  </div>
+</nav>
+
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <h1>Welcome to BloodConnect</h1>
+    </section>
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+    <script src="../script.js"></script>
+</body>
+</html>
